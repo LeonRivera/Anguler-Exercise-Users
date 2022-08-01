@@ -1,6 +1,18 @@
 
 
 <div class="flex flex-column">
+
+  <div class="mb-5 flex justify-content-center">
+    <p-avatar icon="pi pi-user" styleClass="" size="xlarge" 
+    *ngIf="!updating else elseBlock"></p-avatar>
+    <ng-template #elseBlock>
+      <p-avatar styleClass="" size="xlarge"
+      image="{{user.urlImage}}"></p-avatar>
+    </ng-template>
+
+  </div>
+
+
   <label for="">Name</label>
   <input [(ngModel)]="user.name" type="text" pInputText placeholder="Name" />
   <label for="" class="mt-5">Gender</label>
@@ -19,7 +31,7 @@
       </ng-template>
   </p-chips> -->
 
-  <p-chips [(ngModel)]="userStringEmails"></p-chips>
+  <p-chips [(ngModel)]="userStringEmails" pTooltip="Click enter to add one or more emails"  tooltipPosition="top" tooltipEvent="focus"></p-chips>
 
   <div class="flex">
       <p-fileUpload

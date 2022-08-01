@@ -10,6 +10,9 @@ import {ToastModule} from 'primeng/toast';
 import {ChipsModule} from 'primeng/chips';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {TooltipModule} from 'primeng/tooltip';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
 
 const PrimeNgComponents = [
   ButtonModule,
@@ -22,7 +25,10 @@ const PrimeNgComponents = [
   ToastModule,
   ChipsModule,
   MessagesModule,
-  MessageModule
+  MessageModule,
+  TooltipModule,
+  AvatarModule,
+  AvatarGroupModule
 ]
 
 @NgModule({
