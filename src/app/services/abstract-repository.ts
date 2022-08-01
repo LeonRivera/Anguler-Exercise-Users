@@ -29,7 +29,7 @@ export abstract class AbstractRepository<T> {
     )
   }
 
-  save(type:T):Observable<any>{  
+  save(type:any):Observable<any>{  
     return this.httpClient.post<T>(this.devBaseUrl, type)
     .pipe(
       catchError(e => {
@@ -38,7 +38,7 @@ export abstract class AbstractRepository<T> {
     )
   }
 
-  update(type:T):Observable<any>{  
+  update(type:any):Observable<any>{  
     return this.httpClient.put<T>(this.devBaseUrl, type)
     .pipe(
       catchError(e => {

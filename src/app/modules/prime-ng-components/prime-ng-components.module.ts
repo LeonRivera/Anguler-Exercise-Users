@@ -7,6 +7,9 @@ import {CalendarModule} from 'primeng/calendar';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import {FileUploadModule} from 'primeng/fileupload';
 import {ToastModule} from 'primeng/toast';
+import {ChipsModule} from 'primeng/chips';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 const PrimeNgComponents = [
   ButtonModule,
@@ -16,7 +19,10 @@ const PrimeNgComponents = [
   CalendarModule,
   DynamicDialogModule,
   FileUploadModule,
-  ToastModule
+  ToastModule,
+  ChipsModule,
+  MessagesModule,
+  MessageModule
 ]
 
 @NgModule({
