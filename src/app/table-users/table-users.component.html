@@ -1,8 +1,29 @@
 <!-- <button pButton type="button" label="Create"
 [routerLink]="['/models/form']"></button> -->
-<button pButton type="button" label="Create" (click)="show();"></button>
 
-<p-table [value]="users" styleClass="p-datatable-striped" responsiveLayout="scroll">
+
+
+<div class="my-5">
+    <p-toolbar >
+        <div class="p-toolbar-group-left">
+            
+            <p-button (click)="show();" label="New" icon="pi pi-plus"></p-button>
+    <!-- <button class="my-5"  pButton type="button" label="Create" (click)="show();"></button> -->
+                
+            
+        </div>
+        
+        <div class="p-toolbar-group-right">
+           
+        </div>
+    </p-toolbar>
+</div>
+
+
+
+
+<p-table [value]="users" styleClass="p-datatable-striped" responsiveLayout="scroll"
+[paginator]="true" [rows]="2">
     <ng-template pTemplate="header">
         <tr>
             <th></th>
@@ -23,7 +44,7 @@
             <td>{{user.name}}</td>
             <td>{{user.emails[0].email}}</td>
             <td>{{user.gender}}</td>
-            <td>{{user.status}}</td>
+            <td>{{user.status ? "active" : "inactive"}}</td>
             <td>
                 <!-- <button pButton type="button" icon="pi pi-pencil" iconPos="left"
                 [routerLink]="['/models/form', model.id]"></button> -->
