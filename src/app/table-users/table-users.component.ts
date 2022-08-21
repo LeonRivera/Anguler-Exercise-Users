@@ -74,7 +74,7 @@ export class TableUsersComponent implements OnInit {
       },
       header: 'User',
       width: '30%',
-      height: '70%',
+      height: '80%',
     });
 
     ref.onClose.subscribe((mapArgs: Map<any, any>) => {

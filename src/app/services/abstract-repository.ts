@@ -11,7 +11,8 @@ export abstract class AbstractRepository<T> {
   private prodBaseUrl: string = "";
     
   constructor(protected httpClient: HttpClient,protected router: Router,protected modelUrl: string){
-    this.devBaseUrl = `http://localhost:8080/api/v1/${modelUrl}`
+    // this.devBaseUrl = `http://localhost:8080/api/v1/${modelUrl}`;
+    this.devBaseUrl = `https://exercise-users.azurewebsites.net/api/v1/${modelUrl}`;
   } 
 
   findAll():Observable<any>{
